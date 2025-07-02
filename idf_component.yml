@@ -1,0 +1,27 @@
+# Manifest version
+version: "1.0.0"
+
+# Brief description for display in the registry
+description: A feature-rich driver library for SSD1306 OLED displays, compatible with ESP-IDF and inspired by Adafruit GFX.
+
+# URL to your GitHub repository
+url: "https://github.com/Ariif0/espIdf_ssd1306_i2c.git"
+
+# Dependencies required by this library
+dependencies:
+  # Specifies that this library requires ESP-IDF version 4.4 or higher
+  idf: ">=4.4"
+  # Additional dependencies can be added here if needed,
+  # e.g., espressif/esp-timer
+
+# List of files to include when the component is bundled
+files:
+  include:
+    - "src/**"
+    - "include/**"
+    - "CMakeLists.txt"
+    - "Kconfig"
+    - "LICENSE"
+  exclude:
+    - "examples/**"
+    - "assets/**"

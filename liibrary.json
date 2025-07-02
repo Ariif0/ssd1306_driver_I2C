@@ -1,0 +1,10 @@
+{
+  "name": "espIdf_ssd1306_i2c",
+  "version": "1.0.0",
+  "description": "A comprehensive I2C SSD1306 OLED driver for ESP-IDF compatible with c/c++.",
+  "keywords": ["display", "oled", "ssd1306", "i2c", "esp32", "espidf"],
+  "authors": [{ "name": "Muhamad Arif Hidayat", "maintainer": true }],
+  "license": "MIT",
+  "frameworks": ["espidf"],
+  "platforms": ["espressif32"]
+}

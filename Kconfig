@@ -1,0 +1,51 @@
+# Kconfig for the ssd1306_driver component
+
+menu "SSD1306 I2C Driver Configuration"
+
+    config SSD1306_ENABLED
+        bool "Enable SSD1306 Driver"
+        default y
+        help
+            Select this option to include the SSD1306 driver component in the project build.
+
+    if SSD1306_ENABLED
+
+    config SSD1306_I2C_SDA_PIN
+        int "SDA Pin Number"
+        default 21
+        help
+            GPIO pin number for the I2C SDA line.
+
+    config SSD1306_I2C_SCL_PIN
+        int "SCL Pin Number"
+        default 22
+        help
+            GPIO pin number for the I2C SCL line.
+
+    config SSD1306_RESET_PIN
+        int "Reset Pin Number (-1 if not used)"
+        default -1
+        help
+            GPIO pin for the display's reset line. Set to -1 if not connected.
+
+    config SSD1306_I2C_ADDR
+        hex "OLED I2C Address"
+        default 0x3C
+        help
+            The I2C slave address of the SSD1306 display. Common values are 0x3C or 0x3D.
+
+    config SSD1306_SCREEN_WIDTH
+        int "OLED Screen Width (pixels)"
+        default 128
+        help
+            The width of the OLED screen in pixels.
+
+    config SSD1306_SCREEN_HEIGHT
+        int "OLED Screen Height (pixels)"
+        default 64
+        help
+            The height of the OLED screen in pixels.
+
+    endif # SSD1306_ENABLED
+
+endmenu

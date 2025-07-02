@@ -1,0 +1,17 @@
+# PlatformIO/VSCode
+.pio/
+.vscode/
+
+# Build files
+/build/
+/build_*/
+*.o
+*.a
+*.so
+*.elf
+*.bin
+*.map
+
+# OS files
+.DS_Store
+Thumbs.db
