@@ -20,9 +20,7 @@
 #include "esp_log.h"
 #include "ssd1306.h"
 
-//==================================================================================
-// PROJECT CONFIGURATION & DEFINITIONS
-//==================================================================================
+
 
 static const char *TAG = "MENU_APP";
 
@@ -38,9 +36,6 @@ static const char *TAG = "MENU_APP";
 #define MAX_MENU_ITEMS      14              ///< Total number of menu items
 #define MAX_VISIBLE_ITEMS   4               ///< Number of menu items visible on screen at once
 
-//==================================================================================
-// DATA STRUCTURES & GLOBAL VARIABLES
-//==================================================================================
 
 /**
  * @struct menu_item_t
@@ -64,9 +59,6 @@ static volatile int selected_item = 0;              ///< Index of currently sele
 static volatile bool menu_needs_update = true;      ///< Flag to trigger screen redraw
 static QueueHandle_t button_evt_queue = NULL;       ///< Queue for button press events from ISR
 
-//==================================================================================
-// FUNCTIONS & TASKS
-//==================================================================================
 
 /**
  * @brief Interrupt Service Routine (ISR) for handling button presses.
